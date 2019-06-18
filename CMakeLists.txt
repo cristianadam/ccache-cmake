@@ -195,7 +195,7 @@ set(unittest_files
 file(WRITE ${CMAKE_BINARY_DIR}/suites.h.in)
 foreach(source IN LISTS unittest_files)
     file(STRINGS ${source} source_test_suite REGEX "TEST_SUITE\\(")
-    string(REGEX MATCH "([a-z_]+)" suite_name "${source_test_suite}")
+    string(REGEX MATCH "([a-z]+_[a-z]+)|([a-z]+)" suite_name "${source_test_suite}")
     if (suite_name)
         file(APPEND ${CMAKE_BINARY_DIR}/suites.h.in "SUITE(${suite_name})\n")
     endif()
