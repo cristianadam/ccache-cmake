@@ -1,3 +1,7 @@
+# Moved
+
+The project has been moved as a proper fork here: https://github.com/cristianadam/ccache
+
 # ccache-cmake
 
 This project includes a CMake build port for [ccache](https://github.com/ccache/ccache), which is 
